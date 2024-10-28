@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # react-project
 nestjs-typeorm's front-end
 =======
