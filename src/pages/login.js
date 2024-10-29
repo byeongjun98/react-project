@@ -21,7 +21,8 @@ function Login() {
             });
 
             // JWT 토큰 저장
-            localStorage.setItem('token', response.data.token);
+            localStorage.setItem('token', response.data.access_token);
+            console.log(response.data)
             alert('로그인 성공!');
             // 로그인 후 원하는 페이지로 이동 (예: 상품 목록 페이지)
             // 예시: navigate("/products");  // react-router 사용 시
