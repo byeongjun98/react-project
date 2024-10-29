@@ -16,27 +16,27 @@
 /* 로그인 페이지 스타일 */
 .login-form {
   background: white;
-  padding: 30px; /* 패딩을 늘려 여유 공간을 확보 */
-  border-radius: 8px; /* 모서리를 둥글게 */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
-  width: 350px; /* 폼의 너비를 설정 */
-  margin: auto; /* 가운데 정렬 */
-  transition: box-shadow 0.3s; /* 마우스 오버 시 애니메이션 효과 */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  margin: auto;
+  transition: box-shadow 0.3s;
 }
 
 .login-form:hover {
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* 마우스 오버 시 그림자 효과 */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
 .login-form h2 {
-  margin-bottom: 20px; /* 제목과 입력 필드 사이의 간격 */
-  color: #333; /* 제목 색상 */
+  margin-bottom: 20px;
+  color: #333;
 }
 
 .login-form input {
   margin-bottom: 10px;
   padding: 10px;
-  width: 100%; /* 입력 필드가 폼의 너비에 맞게 설정 */
+  width: 100%;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
@@ -48,29 +48,29 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  width: 100%; /* 버튼을 폼 너비에 맞게 설정 */
+  width: 100%;
 }
 
 .login-form button:hover {
-  background-color: #0056b3; /* 버튼 호버 색상 */
+  background-color: #0056b3;
 }
 
 /* 회원가입 버튼 스타일 */
 .register-link {
-  margin-top: 10px; /* 로그인 버튼 아래에 공간 추가 */
-  font-size: 0.8rem; /* 폰트 크기 줄이기 */
-  text-align: left; /* 좌측 정렬 */
-  color: #007bff; /* 링크 색상 */
-  text-decoration: none; /* 링크 밑줄 제거 */
+  margin-top: 10px;
+  font-size: 0.8rem;
+  text-align: left;
+  color: #007bff;
+  text-decoration: none;
 }
 
 .register-link:hover {
-  text-decoration: underline; /* 링크에 마우스 오버 시 밑줄 추가 */
+  text-decoration: underline;
 }
 
 /* 에러 메시지 스타일 */
 .error-message {
-  color: red; /* 에러 메시지 색상 */
+  color: red;
   margin-bottom: 10px;
   font-size: 14px;
 }
@@ -85,5 +85,131 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* GNB 스타일 */
+.gnb {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  position: fixed; /* 상단에 고정 */
+  top: 0; /* 최상단 위치 */
+  left: 0;
+  z-index: 10; /* 콘텐츠 위에 표시되도록 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 효과 추가 */
+}
+
+.gnb h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.gnb nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.gnb nav ul li {
+  margin-left: 20px;
+  cursor: pointer;
+  color: #61dafb;
+}
+
+.gnb nav ul li:hover {
+  color: white;
+}
+
+/* 대시보드 컨텐츠 */
+.dashboard-content {
+  display: flex;
+  justify-content: space-around;
+  padding: 80px 20px 20px; /* GNB 높이만큼 상단 패딩 추가 */
+}
+
+.section {
+  width: 45%;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section h3 {
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 5px 0;
+}
+
+/* 푸터 스타일 */
+.footer {
+  width: 100%;
+  padding: 10px 0;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  position: fixed; /* 페이지 하단에 고정 */
+  bottom: 0;
+  left: 0;
+  z-index: 5; /* 콘텐츠 위에 표시되도록 */
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.dashboard-button {
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dashboard-button:hover {
+  background-color: #0056b3;
+}
+
+/* Navbar 추가 스타일 */
+.navbar {
+  background-color: #282c34;
+  padding: 10px;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.navbar ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+/* 로그인 페이지에서는 GNB와 푸터 숨기기 */
+@media (max-width: 768px) {
+  .gnb, .footer {
+    display: none; /* 로그인 페이지에서 GNB와 푸터 숨기기 */
   }
 }

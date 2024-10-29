@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom'; // useNavigate 훅 추가
 import '../App.css';
 
 function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
+    const navigate = useNavigate(); // useNavigate 훅 사용
 
     // 로그인 요청 핸들러
     const handleLogin = async (e) => {
@@ -22,10 +23,8 @@ function Login() {
 
             // JWT 토큰 저장
             localStorage.setItem('token', response.data.access_token);
-            console.log(response.data)
             alert('로그인 성공!');
-            // 로그인 후 원하는 페이지로 이동 (예: 상품 목록 페이지)
-            // 예시: navigate("/products");  // react-router 사용 시
+            navigate('/dashboard'); // 로그인 후 대시보드로 이동
         } catch (error) {
             setError('로그인에 실패했습니다. 사용자명을 확인하세요.');
         }
